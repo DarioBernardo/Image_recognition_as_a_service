@@ -1,0 +1,22 @@
+python_app:
+  restart: always
+  build: ./python_app
+  expose:
+    - "8080"
+  ports:
+    - "8080:8080"
+  volumes:
+    - /usr/src/app/static
+  command: /bin/bash /usr/src/app/run.sh
+
+proxy:
+  restart: always
+  build: ./proxy
+  expose:
+    - "80"
+  ports:
+    - "80:80"
+  volumes_from:
+    - python_app
+  links:
+    - python_app:python_app
