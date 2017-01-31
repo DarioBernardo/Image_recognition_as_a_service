@@ -28,6 +28,15 @@ Before interacting with the app, wait for the following message:
 
 The app needs to download the deep network model from the internet first. It will take a couple of seconds.
 
+To get an image classification, you can use the /classify entrypoing with the "link" attribute to specify an image URL.
+Like the example below.
+
+` http://localhost/classify?link=http%3A%2F%2Fwww.hvac2000.com%2Fwp-content%2Fuploads%2F2016%2F05%2FOrange-Images-6.jpg `
+
+Alternatively, you can just go to http://localhost and use the GUI there on that page.
+
+NOTE: The software do not work with HTTPS links! Furthermore it works with 'jpg' images only.
 
 
+MIT Lincence
 
